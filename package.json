@@ -1,0 +1,31 @@
+{
+    "name": "cordova-plugin-installed-apps",
+    "version": "1.0.0",
+    "description": "Cordova plugin to get list of all installed apps with icons for Android and iOS",
+    "cordova": {
+        "id": "cordova-plugin-installed-apps",
+        "platforms": [
+            "android",
+            "ios"
+        ]
+    },
+    "keywords": [
+        "cordova",
+        "cordova-android",
+        "cordova-ios",
+        "ecosystem:cordova",
+        "installed-apps",
+        "app-list",
+        "app-icon"
+    ],
+    "author": "Your Name",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yourusername/cordova-plugin-installed-apps.git"
+    },
+    "bugs": {
+        "url": "https://github.com/yourusername/cordova-plugin-installed-apps/issues"
+    },
+    "homepage": "https://github.com/yourusername/cordova-plugin-installed-apps#readme"
+}
