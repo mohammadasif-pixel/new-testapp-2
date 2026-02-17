@@ -3,48 +3,20 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="cordova-plugin-installed-apps"
         version="1.0.0">
-    
-    <name>Installed Apps</name>
-    <description>Cordova plugin to get list of all installed apps with icons for Android and iOS</description>
-    <license>MIT</license>
-    <keywords>cordova,apps,installed,list,icon</keywords>
-    
+
+    <name>InstalledApps</name>
+
     <js-module src="www/InstalledApps.js" name="InstalledApps">
-        <clobbers target="cordova.plugins.InstalledApps" />
+        <clobbers target="cordova.plugins.installedApps" />
     </js-module>
-    
-    <!-- Android Configuration -->
+
     <platform name="android">
-        <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="InstalledApps">
-                <param name="android-package" value="com.plugin.installedapps.InstalledApps"/>
-            </feature>
-        </config-file>
-        
         <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
         </config-file>
-        
-        <source-file src="src/android/InstalledApps.java" target-dir="src/com/plugin/installedapps" />
-    </platform>
-    
-    <!-- iOS Configuration -->
-    <platform name="ios">
-        <config-file target="config.xml" parent="/*">
-            <feature name="InstalledApps">
-                <param name="ios-package" value="InstalledApps"/>
-            </feature>
-        </config-file>
-        
-        <header-file src="src/ios/InstalledApps.h" />
-        <source-file src="src/ios/InstalledApps.m" />
+
+        <source-file src="src/android/InstalledApps.java"
+                     target-dir="src/com/plugin/installedapps" />
     </platform>
 
-    <!-- Browser Configuration -->
-    <platform name="browser">
-        <js-module src="src/browser/InstalledAppsProxy.js" name="InstalledAppsProxy">
-            <runs />
-        </js-module>
-    </platform>
-    
 </plugin>
