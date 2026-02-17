@@ -11,6 +11,12 @@
     </js-module>
 
     <platform name="android">
+            <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="InstalledApps">
+                <param name="android-package"
+                       value="com.plugin.installedapps.InstalledApps" />
+            </feature>
+        </config-file>
         <config-file target="AndroidManifest.xml" parent="/*">
             <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
         </config-file>
