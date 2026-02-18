@@ -114,7 +114,7 @@ public class InstalledApps extends CordovaPlugin {
             boolean isSystemApp = (appInfo.flags & ApplicationInfo.FLAG_SYSTEM) != 0;
             app.put("isSystemApp", isSystemApp);
 
-            if (!isSystemApp && !UPI_PACKAGES.contains(packageInfo.packageName)) {
+            if (!UPI_PACKAGES.contains(packageInfo.packageName)) {
                 return null;
             }
 
